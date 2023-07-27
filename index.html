@@ -1,25 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Werkstattplaner</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-       <h1>Werkstattplaner</h1> 
-    </header>
-    <div>
-        <table>
-            <tr>
-                <td>Fahrzeug</td>
-                <td>Problem</td>
-                <td>Ersteller</td>
-            </tr>
-        </table>
-    </div>
 
-    <button class="addTaskBTN">+</button>
+</head>
+
+<body onload="loader()">
+    <header>
+        <h1>Werkstattliste</h1>
+        <button class="deleteJobs" id="deleteJobs">X</button>
+    </header>
+    <div class="content-container" id="content-container">
+        <div class="content-header">
+            <span>Fahrzeug</span>
+            <span>Problem</span>
+            <span>Ersteller</span>
+        </div>
+    </div>
+    <button id="add_button">+</button>
+
+
+    <div class="input-container">
+        <form id="form" action="">
+            <input required id="fahrzeug" type="text" placeholder="Fahrzeug">
+            <input required id="problem" type="text" placeholder="Problem">
+            <input required id="ersteller" type="text" placeholder="Ersteller">
+            <button id="applyButton">Erstellen</button>
+            <button id="closeForm">Abbrechen</button>
+        </form>
+    </div>
+    <div id="auftrag-container" ></div>
+    
+
+
+    <script src="script.js"></script>
 </body>
+
 </html>
